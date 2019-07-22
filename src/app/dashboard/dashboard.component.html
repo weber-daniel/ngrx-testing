@@ -1,0 +1,24 @@
+<div class="dashboard-wrapper">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <a class="navbar-brand" [routerLink]="['/login']">NGRX - Store Testing</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="(isLoggedIn$ | async)">
+          <a class="nav-link" (click)="logout()">Hier abmelden!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+
+</div>
